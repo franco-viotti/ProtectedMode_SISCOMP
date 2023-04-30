@@ -1,4 +1,4 @@
-# ProtectedMode_SISCOMP
+# Modo Protegido - Sistemas de Computación
 
 Este código es un programa de arranque que cambia el procesador de la computadora del modo real al modo protegido. Primero, habilita el bit A20 y establece el modo VGA en modo normal. Luego deshabilita las interrupciones y carga la Tabla de Descriptores Global (GDT) en el registro GDTR. Después de eso, cambia el último bit del registro CR0 a 1 para activar el modo protegido y salta a la etiqueta “protected_mode”. En este punto, el código cambia a 32 bits y se establecen los registros de segmento con el valor de DATA_SEG. Luego, se carga un mensaje en ESI y se escribe directamente en la memoria de video para mostrarlo en la pantalla. Finalmente, el programa entra en un bucle infinito y se detiene.
 
